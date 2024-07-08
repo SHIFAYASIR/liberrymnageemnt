@@ -1,0 +1,208 @@
+{
+	"info": {
+		"_postman_id": "27e37773-99b9-4fcd-990f-d4fceeeab06a",
+		"name": "Dummy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17421988"
+	},
+	"item": [
+		{
+			"name": "Employees",
+			"item": [
+				{
+					"name": "GetEmployeesById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/employees/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{EMP_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllEmployees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/employees",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddEmployee",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"Code\": \"CT8100\",\r\n        \"Name\": \"Bruce Banner\",\r\n        \"Job\": \"Salesman\",\r\n        \"Salary\": 20000,\r\n        \"Department\": \"Sales\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/employees",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddManyEmployees",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"Id\": 0,\r\n        \"Code\": \"CT8100\",\r\n        \"Name\": \"Bruce Banner\",\r\n        \"Job\": \"Salesman\",\r\n        \"Salary\": 20000,\r\n        \"Department\": \"Sales\"\r\n    },\r\n    {\r\n        \"Id\": 0,\r\n        \"Code\": \"CT8200\",\r\n        \"Name\": \"Clint\",\r\n        \"Job\": \"Salesman\",\r\n        \"Salary\": 20000,\r\n        \"Department\": \"Sales\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/employees/many",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees",
+								"many"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Employee",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"Id\":{{EMP_ID}},\r\n        \"Code\": \"CT8100\",\r\n        \"Name\": \"Bruce Banner000012ddwdw\",\r\n        \"Job\": \"Salesman\",\r\n        \"Salary\": 20000,\r\n        \"Department\": \"Sales\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/employees/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{EMP_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteEmployees",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/employees/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "{{EMP_ID}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SearchEmployee",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/employees/search?name=jo",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees",
+								"search"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "jo"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Status",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/employees/status",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"employees",
+								"status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
